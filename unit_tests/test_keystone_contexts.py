@@ -171,4 +171,4 @@ class TestKeystoneContexts(CharmTestCase):
 
         mock_config.return_value = 'True'
         self.assertEqual({'root_level': 'DEBUG'}, ctxt())
-        self.assertEqual({'log_level': 'DEBUG'}, ctxt())
+        self.assertEqual({'log_level': 'WARNING'}, ctxt())
