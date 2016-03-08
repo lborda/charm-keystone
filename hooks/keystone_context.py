@@ -248,5 +248,7 @@ class KeystoneLoggingContext(context.OSContextGenerator):
         debug = config('debug')
         if debug:
             ctxt['root_level'] = 'DEBUG'
+        if config.changed('log-level'):
+            ctxt['log_level'] = config('log-level')
 
         return ctxt
